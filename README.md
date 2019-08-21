@@ -1,1 +1,0 @@
-# Nativescript-Angular-Facebook-Login
