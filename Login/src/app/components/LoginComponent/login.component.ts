@@ -3,13 +3,17 @@ import { Component, OnInit } from "@angular/core";
 import { RouterExtensions } from "nativescript-angular";
 import { ITnsOAuthTokenResult } from "nativescript-oauth2";
 import { request, HttpResponse } from "tns-core-modules/http";
-import { AuthService } from "../auth.service";
-import { TokenService } from "../token.service";
+import { AuthService } from "../../auth.service";
+import { TokenService } from "../../token.service";
+
+
 
 @Component({
     selector: "ns-items",
     moduleId: module.id,
     templateUrl: "./login.component.html",
+    styleUrls: ['./login.component.css']
+    
 })
 export class LoginComponent {
 
@@ -19,7 +23,16 @@ export class LoginComponent {
       private token : TokenService){}
 
   Welcome: string = 'Hello There, Please Login';
-  
+  username: string;
+  password: string;
+
+  Login(args)
+  {
+      
+  }
+
+
+
   facebookSendData(obj) {
     this.token.getObject(obj.id,obj.name,obj.email,obj.birthday,obj.picture.data.url);
   } 
@@ -77,7 +90,9 @@ export class LoginComponent {
            var obj = response.content.toJSON();
            
            this.facebookSendData(obj);
+          
 
+           
            this.navigateToAuthenticated();
 
           console.log(obj);

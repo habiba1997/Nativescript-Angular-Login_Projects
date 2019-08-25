@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
-import { LoginComponent } from "./components/login.component"
+import { LoginComponent } from "./components/LoginComponent/login.component"
 import { AuthenticatedComponent } from "./components/authenticated.component"
 
 const routes: Routes = [
@@ -15,3 +15,6 @@ const routes: Routes = [
     exports: [NativeScriptRouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [ LoginComponent, AuthenticatedComponent
+  ];
+

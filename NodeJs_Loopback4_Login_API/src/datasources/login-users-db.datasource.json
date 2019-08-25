@@ -1,0 +1,11 @@
+{
+  "name": "loginUsersDB",
+  "connector": "mongodb",
+  "url": "",
+  "host": "localhost",
+  "port": 0,
+  "user": "",
+  "password": "",
+  "database": "LoginDb",
+  "useNewUrlParser": true
+}

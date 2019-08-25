@@ -3,7 +3,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { LoginComponent } from "./components/login.component"
+import { LoginComponent } from "./components/LoginComponent/login.component"
 import { AuthenticatedComponent } from "./components/authenticated.component"
 import { AuthService } from "./auth.service";
 import { TokenService } from "./token.service";

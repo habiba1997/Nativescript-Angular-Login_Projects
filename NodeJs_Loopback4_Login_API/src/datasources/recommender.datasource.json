@@ -1,0 +1,13 @@
+[
+  {
+    "name": "recommender",
+    "connector": "mongodb",
+    "url": "",
+    "host": "localhost",
+    "port": 1,
+    "user": "",
+    "password": "",
+    "database": "LoginDb",
+    "useNewUrlParser": true
+  }
+]
