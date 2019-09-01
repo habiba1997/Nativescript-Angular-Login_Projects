@@ -1,0 +1,15 @@
+<StackLayout class="p-20">
+
+    <Label text="You're authenticated! 💪"></Label>
+  
+   <label text="Id: {{Object.id}}" ></label> 
+   <label text="Name: {{Object.name}}" ></label>   
+   <Image src="{{Object.url}}" class="img-rounded p-l-15 p-r-15 p-t-15"></Image>
+
+
+   <Button text="Change Profile Picture" (tap)="onTapNavigateToPicture()" class="botn btn-primary btn-active"></Button>
+       
+   <Button text="Logout" (tap)="onTapLogout()" class="botn bg-danger"></Button>
+
+
+  </StackLayout>

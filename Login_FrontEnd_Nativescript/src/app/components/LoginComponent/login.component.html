@@ -1,0 +1,94 @@
+<Page class="page">
+
+<Page.actionBar>
+    <ActionBar title="My App" class="action-bar">
+    </ActionBar>
+    </Page.actionBar>
+
+<TabView 
+    selectedTabTextColor="#f8f9fa" 
+    tabBackgroundColor="#343a40"
+    tabTextFontSize="20"
+    androidSelectedTabHighlightColor="#f8f9fa"
+    tabTextColor="#6c757d" >
+    <StackLayout *tabItem="{title: 'Login'}">
+        
+        <Label text="{{login}}" textWrap="true" class="text-dark m-15 h2 text-left" ></Label>
+        
+        
+        <GridLayout *ngIf="isWrongLogin" height="60" class="text-center text-danger" >
+            <Label text="Wrong Email or Password" ></Label>
+        </GridLayout>
+
+        <FlexboxLayout class="page" >
+                <StackLayout class="form">
+                                        
+                    <StackLayout class="input-field">
+                        <TextField class="input" hint="Email" #email></TextField>
+                    </StackLayout>
+                    <StackLayout class="input-field">
+                        <TextField class="input" secure="true" hint="Password" #password></TextField>
+                    </StackLayout>
+                    
+                    <StackLayout>
+                        <Button class="botn btn-primary" text="Login"  (tap)="onTapLogin($event)"></Button>
+                    </StackLayout>
+            
+                    <!--
+                    <StackLayout>
+                        <Button class="botn btn-primary" text="Print"  (tap)="printInputs($event)"></Button>
+                    </StackLayout>-->
+
+                </StackLayout>   
+            </FlexboxLayout>
+            <AbsoluteLayout >
+                    
+                    <Button left="10" top="10" class="btn btn-googlePLus"   
+                    (tap)="onTapLoginGooglePlus($event)"></Button>
+        
+        
+                    <Button left="150" top="10"
+                    class="btn btn-facebook"   
+                    (tap)="onTapLoginFacebook($event)"></Button>  
+        
+                </AbsoluteLayout>
+                
+    </StackLayout>
+
+
+    <StackLayout *tabItem="{title: 'SignUp'}" >
+        
+        <Label text="{{signup}}" textWrap="true" class="text-dark m-15 h2 text-left" ></Label>
+        <FlexboxLayout class="page" >
+
+                <StackLayout class="form input-field">
+                        <AbsoluteLayout class="input-field">
+                                <TextField left="0" top="10" class="input" hint="First Name" #firstname></TextField>
+                                <TextField left="250" top="10" class="input" hint="Last Name" #lastname></TextField>
+                        </AbsoluteLayout>        
+                    
+                        <StackLayout class="input-field">
+                                <TextField class="input" hint="Email" #emailsignup></TextField>
+                        </StackLayout>
+                        <StackLayout class="input-field">
+                                <TextField class="input" hint="Birthday: day/month/year or day-month-year"  keyboardType="datetime" #birthday></TextField>
+                        </StackLayout>
+                    
+                        <StackLayout class="input-field">
+                                <TextField class="input" secure="true" hint="Password" #passwordsignup></TextField>
+                        </StackLayout>
+                        
+                        <Button text="SignUp" class="botn bg-danger" (tap)="SignUp($event)"></Button>
+            
+                </StackLayout>   
+            
+                
+        </FlexboxLayout>
+
+    </StackLayout>
+   
+    
+</TabView>
+
+
+ </Page>

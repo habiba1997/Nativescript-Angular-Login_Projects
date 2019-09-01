@@ -1,0 +1,9 @@
+
+<ActionBar title="My App" class="action-bar">
+</ActionBar>
+
+<StackLayout>
+    <Label text={{Welcome}} textWrap="true" class="text-danger m-15 h2 text-left"></Label>
+    <Image *ngIf ="myImage" src="{{myImage}}" class="imgCss" stretch="aspectFill"></Image>
+    <Button text="Upload from Gallery" class="botn bg-danger" (tap)="getPicture($event)"></Button>
+</StackLayout>
