@@ -1,0 +1,14 @@
+change app.gradle to 
+
+android {
+  defaultConfig {
+    minSdkVersion 18
+    generatedDensities = []
+  }
+  aaptOptions {
+    additionalParameters "--no-version-vectors"
+  }
+}
+
+
+minDskVersion to 18 
