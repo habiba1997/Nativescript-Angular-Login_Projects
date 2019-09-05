@@ -78,3 +78,6 @@ Register your mobile app by following the wizard in the Developer Console.
 <li>Run application by: "tns run android" in command line </li>
 
 </ol>
+
+
+#### For more details: <a href="https://www.npmjs.com/package/nativescript-oauth2">OAuth 2 Plugin for NativeScript</a>
